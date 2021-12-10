@@ -18,3 +18,23 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
   É baseado Interface do Front-end da plataforma digital do Banco Inter, utilizando dados mockados para fins de visualização (Futuramente integrada com novo projeto em backend), desenvolvido a partir da ideia do instrutor do curso.
   
   O projeto conta com as 3 telas exibidas a seguir, utilizando navegação modelo SPA (Single Page Application), possui validação básica de campos obrigatórios tanto no login quanto no cadastro, apesar ded ainda não estar integrado com umaa regra de negócios a partir de um back-end, além da opção de alternância entre temas de exibição claro e escuro.
+
+
+## Telas Reproduzidas
+
+- Login de usuário
+  <img src="./src/demo/SignIn.jpg" alt="Tela de Login"/>
+  <img src="./src/demo/SignIn-dark.jpg" alt="Tela de Login Tema Escuro"/>
+
+- Cadastro de usuário
+  <img src="./src/demo/SignUp.jpg" alt="Tela de Cadastro"/>
+  <img src="./src/demo/SignUp-dark.jpg" alt="Tela de Cadastro Tema Escuro"/>
+
+- Painel de controle
+  <img src="./src/demo/dashboard.jpg" alt="Painel de Controle"/>
+  <img src="./src/demo/dashboard-dark.jpg" alt="Painel de Controle Tema Escuro"/>
+
+
+## Demonstração da aplicação
+
+  <img src="./src/demo/navegacao.gif" alt="Navegação entre as telas"/>
