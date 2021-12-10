@@ -15,36 +15,64 @@ import { Link, useNavigate } from 'react-router-dom';
 const SignUp = () => {
   const navigate = useNavigate();
 
-  const completeSignUp = () => {
+  const completeSignUp =  (event: React.FormEvent) => {
+    event.preventDefault();
     navigate('/dashboard');
   }
+
   return (
     <Wrapper>
       <Background image={backgroundImage}/>
 
       <Card width="403px" hasShadow>
-        <img
-          src={logoInter}
-          width={172}
-          alt="Logotipo Banco Inter"
-        />
+        <form action="submit" onSubmit={completeSignUp}>
+          <img
+            src={logoInter}
+            width={172}
+            alt="Logotipo Banco Inter"
+          />
 
-        <InputGroup>
-          <Input placeholder="NOME" type="text" />
-          <Input placeholder="SOBRENOME" type="text" />
-          <Input placeholder="EMAIL" type="email" />
-          <Input placeholder="SENHA" type="password" />
-          <Input placeholder="CONFIRMAR SENHA" type="password" />
-        </ InputGroup>
+          <InputGroup>
+            <Input
+              required
+              placeholder="NOME *"
+              type="text"
+            />
+            <Input
+              required
+              placeholder="SOBRENOME *"
+              type="text"
+            />
+            <Input
+              required
+              placeholder="EMAIL *"
+              type="email"
+            />
+            <Input
+              required
+              placeholder="SENHA *"
+              type="password"
+            />
+            <Input
+              required
+              placeholder="CONFIRMAR SENHA *"
+              type="password"
+            />
+            <p style={{ fontSize: 12 }}>
+              <span className="primary-color">*</span>&nbsp;
+              Campos obrigatórios
+            </p>
+          </ InputGroup>
 
-        <ButtonGroup>
-          <Button type="button" onClick={completeSignUp}>
-            Cadastrar
-          </Button>
-          <p>
-            Já tem uma conta? <Link to="/signin">Entre já</Link>
-          </p>
-        </ ButtonGroup>
+          <ButtonGroup>
+            <Button type="submit" >
+              Cadastrar
+            </Button>
+            <p>
+              Já tem uma conta? <Link to="/signin">Entre já</Link>
+            </p>
+          </ ButtonGroup>
+        </form>
       </ Card>
     </ Wrapper>
   );

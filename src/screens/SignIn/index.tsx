@@ -15,33 +15,45 @@ import { Link, useNavigate } from 'react-router-dom';
 const SignIn = () => {
   const navigate = useNavigate();
 
-  const completeSignIn = () => {
+  const completeSignIn = (event: React.FormEvent) => {
+    event.preventDefault();
     navigate('/dashboard');
   }
+
   return (
     <Wrapper>
       <Background image={backgroundImage}/>
 
       <Card width="403px" hasShadow>
-        <img
-          src={logoInter}
-          width={172}
-          alt="Logotipo Banco Inter"
-        />
+        <form action="submit" onSubmit={completeSignIn}>
+          <img
+            src={logoInter}
+            width={172}
+            alt="Logotipo Banco Inter"
+          />
 
-        <InputGroup>
-          <Input placeholder="EMAIL" type="email" />
-          <Input placeholder="SENHA" type="password" />
-        </ InputGroup>
+          <InputGroup>
+            <Input
+              required
+              placeholder="EMAIL"
+              type="email"
+            />
+            <Input
+              required
+              placeholder="SENHA"
+              type="password"
+            />
+          </ InputGroup>
 
-        <ButtonGroup>
-          <Button type="button" onClick={completeSignIn}>
-            Entrar
-          </Button>
-          <p>
-            Ainda não é cadastrado? <Link to="/signup">Cadastre-se já</Link>
-          </p>
-        </ ButtonGroup>
+          <ButtonGroup>
+            <Button type="submit">
+              Entrar
+            </Button>
+            <p>
+              Ainda não é cadastrado? <Link to="/signup">Cadastre-se já</Link>
+            </p>
+          </ ButtonGroup>
+        </form>
       </ Card>
     </ Wrapper>
   );

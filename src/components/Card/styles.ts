@@ -22,4 +22,12 @@ export const CardContainer = styled.div<{
   flex-direction: column;
 
   z-index: 5000;
+
+  form {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 `;
