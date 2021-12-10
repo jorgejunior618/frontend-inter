@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const DashboardBackgrund = styled.main`
   width: 100%;
-  height: 100vh;
+  height: auto;
 
   display: flex;
   align-items: center;

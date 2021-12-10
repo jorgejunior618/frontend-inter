@@ -29,6 +29,19 @@ const GlobalStyle = createGlobalStyle`
       filter: opacity(0.8)
     }
   }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.colors.primary}; 
+    border-radius: 8px;
+    transition-duration: box-shadow 0.6s;
+    &:hover {
+      box-shadow: inset 0 0 5px ${({ theme }) => theme.colors.tertiary}; 
+    }
+  }
+
   .ok-text{
     color: ${({ theme }) => theme.colors.success};
     font-size: 0.75rem;

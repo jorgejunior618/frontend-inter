@@ -3,7 +3,7 @@ import { useState } from "react";
 import Button from "../../components/Button";
 import Card from "../../components/Card";
 import Header from "../../components/Header";
-import Input from "../../components/Input";
+import Input, { InputCurrency } from "../../components/Input";
 import Statement from "./Statement/indext";
 import {
   DashboardBackgrund,
@@ -65,10 +65,11 @@ const Dashboard = () => {
             </InlineTitle>
 
             <InlineContainer>
-              <Input
-                style={{ flex: 1 }}
-                placeholder="VALOR"
-                type="number"
+              <InputCurrency
+                name="Valor a receber"
+                onValueChange={(value, name) => {
+                  console.log(value, name);
+                }}
               />
               <Button >Gerar Código</Button>
             </InlineContainer>
