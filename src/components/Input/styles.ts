@@ -8,7 +8,7 @@ export const InputContainer = styled.div`
   border:1px solid ${({ theme }) => theme.colors.primary};
   border-radius: 10px;
 
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 
   display: flex;
   justify-content: center;
