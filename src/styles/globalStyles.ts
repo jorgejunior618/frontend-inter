@@ -6,6 +6,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    color: ${({ theme }) => theme.colors.defaultFont};
+    transition-duration: .6s;
+  }
+  a, h1, h2, h3, p, strong, span {
+    color: ${({ theme }) => theme.colors.defaultFont};
   }
   body {
     font-family: 'Roboto', sans-serif;  
@@ -24,6 +29,10 @@ const GlobalStyle = createGlobalStyle`
       filter: opacity(0.8)
     }
   }
+  .ok-text{
+    color: ${({ theme }) => theme.colors.success};
+    font-size: 0.75rem;
+  }
   .primary-color{
     color: ${({ theme }) => theme.colors.primary};
   }
@@ -34,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 28px;
-    color: #000000;
+    color: ${({ theme }) => theme.colors.defaultFont};
   }
   .wallet{
     font-weight: 500;
