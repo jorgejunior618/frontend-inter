@@ -27,12 +27,12 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
   <img
     src="./src/assets/demo/SignIn.jpg"
     alt="Tela de Login"
-    width="450px"
+    width="45%"
   />
   <img
     src="./src/assets/demo/SignIn-dark.jpg"
     alt="Tela de Login Tema Escuro"
-    width="450px"
+    width="45%"
   />
 
 - Cadastro de usuário
@@ -40,12 +40,12 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
   <img
     src="./src/assets/demo/SignUp.jpg"
     alt="Tela de Cadastro"
-    width="450px"
+    width="45%"
   />
   <img
     src="./src/assets/demo/SignUp-dark.jpg"
     alt="Tela de Cadastro Tema Escuro"
-    width="450px"
+    width="45%"
   />
 
 - Painel de controle
@@ -53,12 +53,12 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
   <img
     src="./src/assets/demo/dashboard.jpg"
     alt="Painel de Controle"
-    width="450px"
+    width="45%"
   />
   <img
     src="./src/assets/demo/dashboard-dark.jpg"
     alt="Painel de Controle Tema Escuro"
-    width="450px"
+    width="45%"
   />
 
 ## Demonstração da aplicação
