@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Button from "../../components/Button";
 import Card from "../../components/Card";
 import Header from "../../components/Header";
@@ -8,11 +10,32 @@ import {
   BodyContainer,
   InlineContainer,
   InlineTitle,
+  CircledButton,
+  InlineContainerPix,
 } from "./styles";
+import { MdContentCopy } from 'react-icons/md';
 
 const Dashboard = () => {
+  const [copiado, setcopiado] = useState(false);
+
+  function copiarChavePix() {
+    var chavePixElement = document.querySelector('p#pixCopiaCola');
+
+    var chavePix = chavePixElement?.textContent || "";
+
+    navigator.clipboard.writeText(chavePix);
+    
+    setcopiado(true);
+    setTimeout(
+      () =>{
+        setcopiado(false);
+      },
+      5000,
+    );
+  }
 
   const wallet = 0.0;
+
   return (
     <DashboardBackgrund>
       <Header />
@@ -51,7 +74,23 @@ const Dashboard = () => {
             </InlineContainer>
 
             <p className="primary-color">Pix copia e cola</p>
-            <p className="primary-color">dgfkgasdfjgjkgeriogmldfbgklkldfhmh</p>
+            
+            <InlineContainerPix >
+              <p className="primary-color" id="pixCopiaCola">
+                dgfkgasdfjgjkgeriogmldfbgklkldfhmh
+              </p>
+
+              <CircledButton onClick={copiarChavePix}>
+                <MdContentCopy size={16} />
+              </CircledButton>
+
+              {copiado ? (
+                <p className="ok-text">
+                  ✓ Copiado
+                </p>
+              )
+              : (<></>)}
+            </InlineContainerPix>
           </Card>
           
           <Card width="90%">

@@ -51,3 +51,31 @@ export const InlineContainer = styled.div`
     flex: 1;
   }
 `;
+
+export const InlineContainerPix = styled.div`
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const CircledButton = styled.button`
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.colors.background};
+  border: none;
+
+  margin-left: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: filter .6s;
+
+  &:hover {
+    filter: brightness(${({ theme }) => theme.light ? (0.8) : (1.8)});
+  }
+`;
