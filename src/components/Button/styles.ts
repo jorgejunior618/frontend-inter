@@ -4,6 +4,7 @@ export const ButtonContainer = styled.button`
   width: 100%;
   height: 46px;
 
+  font-weight: 700;
   color: ${({ theme }) => theme.colors.background};
   background: ${({ theme }) => theme.colors.primary};
   border:1px solid ${({ theme }) => theme.colors.primary};

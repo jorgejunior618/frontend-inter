@@ -16,11 +16,16 @@ export const InputContainer = styled.div`
   z-index: 5000;
 
   input {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 400;
     background: transparent !important;
     border: 0;
     width: 100%;
     margin: 0 20px;
+
+    &::placeholder {
+      color: ${({ theme }) => theme.colors.secondary};
+      opacity: 1;
+    }
   }
 `;
