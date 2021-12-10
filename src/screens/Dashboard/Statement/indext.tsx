@@ -35,7 +35,7 @@ const StatementItem = ({
           <strong>{user.firstName} {user.lastName}</strong>
         </p>
 
-        <p>{format(updatedAt, "dd/MM/aaaa 'às' HH:mm 'h'")}</p>
+        <p>{format(updatedAt, "dd/MM/yyyy 'às' HH:mm 'h'")}</p>
       </StatementItemInfo>
     </StatementItemContainer>
   );
