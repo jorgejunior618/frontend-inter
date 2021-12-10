@@ -37,4 +37,4 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 ## Demonstração da aplicação
 
-  <img src="./src/demo/navegacao.gif" alt="Navegação entre as telas"/>
+  <img src="./src/assets/demo/navegacao.gif" alt="Navegação entre as telas"/>
