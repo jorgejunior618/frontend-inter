@@ -22,7 +22,7 @@ const SignIn = () => {
     <Wrapper>
       <Background image={backgroundImage}/>
 
-      <Card width="403px">
+      <Card width="403px" hasShadow>
         <img
           src={logoInter}
           width={172}

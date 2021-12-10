@@ -12,7 +12,7 @@ const Card = ({
   children,
   width='100%',
   height='auto',
-  hasShadow=true,
+  hasShadow=false,
 } : CardProps) => {
   return (
     <CardContainer
