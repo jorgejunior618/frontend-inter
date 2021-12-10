@@ -30,7 +30,14 @@ const toggleTheme = () => {
     <ThemeProvider theme={themeMode === 'light' ? theme : darkTheme}>
       <GlobalStyle />
       <Router />
-      <ThemeButton onClick={toggleTheme} />
+      <ThemeButton
+        title={
+          `Mudar para tema ${
+            themeMode === 'light' ? 'escuro' : 'claro'
+          }`
+        }
+        onClick={toggleTheme}
+      />
     </ThemeProvider>
   );
 }
