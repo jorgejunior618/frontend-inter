@@ -1,15 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Router from './routes';
 import { ThemeProvider } from 'styled-components'
 import GlobalStyle from './styles/globalStyles';
-import { theme } from './styles/themes'
+import { theme, darkTheme } from './styles/themes'
+import ThemeButton from './components/ThemeButton';
 
 function App() {
+  const [themeMode, setThemeMode] = useState('light');
+
+const toggleTheme = () => {
+  switch (themeMode) {
+    case 'light':
+      setThemeMode('dark');
+      break;
+    
+    case 'dark':
+      setThemeMode('light');
+      break;
+
+    default:
+      setThemeMode('light');
+      break;
+  }
+}
+ 
+
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={themeMode === 'light' ? theme : darkTheme}>
       <GlobalStyle />
       <Router />
+      <ThemeButton onClick={toggleTheme} />
     </ThemeProvider>
   );
 }
